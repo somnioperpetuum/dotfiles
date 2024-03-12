@@ -23,8 +23,9 @@ def linux_exec() -> None:
             command = line.split()
             list_of_commands.append(command)
     # Runs all commands in a batch order
-    for command in list_of_commands:
-        result = subprocess.run(command,capture_output=True)
+    for item in list_of_commands:
+        result = subprocess.run(item,capture_output=True)
+        print(f"\nStage done!\n {list_of_commands.index(item)}")
         # Log File Handling
         log_file.write("\n" + result.stdout.decode())
         log_file.write("\n" + result.stderr.decode())

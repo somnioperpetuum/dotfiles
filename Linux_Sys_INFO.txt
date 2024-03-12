@@ -1,6 +1,6 @@
 sudo apt update 
 sudo apt upgrade -y
-sudo apt install nala neofetch build-essential vim zsh notify-send curl flatpak -y
+sudo apt install nala neofetch build-essential vim zsh curl flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo snap refresh -y
 sudo snap install lxd -y

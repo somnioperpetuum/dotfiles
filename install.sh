@@ -2,15 +2,15 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install python3 -y && sudo apt install pip3 -y
+sudo apt install python3 -y && sudo apt install python3-pip -y
 
 source ~/.profile
 
-python3 -m venv .dotfiles
+# python3 -m venv dotfiles
 
-cd .dotfiles
+# cd /home/$USER/dotfiles
 
-source .dotfiles/bin/activate
+# source dotfiles/bin/activate
 
 pip3 install -r ./requirements.txt
 

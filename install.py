@@ -8,10 +8,10 @@ import somnio_config.scripts.utility.dynamic_recursive as suggestion
 
 # Version
 
-print("Installer Utitlity v0.1")
+print("Installer Utility v0.1")
 print("Please run at /Home and if Win run as ADMIN")
 print("Be prepared to some pop up windows")
-print("\n This script needs python and pip3 tools to run properly")
+print("\nThis script needs python and pip3 tools to run properly\n")
 
 
 
