@@ -1,5 +1,7 @@
 
-# Installer Utility
+# Installer Utility v1.0
+
+Only Linux Support
 
 ## Description
 
@@ -8,21 +10,19 @@ The aim of this utility is to ease the installation process according the platfo
 I mainly use three kinds of platforms:
 
 - Linux
-- Windows
-- WSL (special config files)
+- Container or Barebones Linux
 
 ## What the program should do?
 
 - [x] Select the platform
-- [ ] Start Executing Commands
+- [x] Start Executing Commands
 
       - Full OS Upgrade
       - Package Manager Setup
-        - [ ] Linux
-        - [ ] Win: choco, scoop -> msys2
-        - [ ] WSL
+        - [x] Linux
+        - [x] Linux Container
       - Development Environment
-        - Shell: NUSHELL
+        - Shell: NUSHELL, BASH, ZSH
         - Programming Languages & Frameworks
           - Python
           - Rust
@@ -31,5 +31,3 @@ I mainly use three kinds of platforms:
           - Python
             - Pip
             - Conda
-          - JS
-            - Node

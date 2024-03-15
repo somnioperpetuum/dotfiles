@@ -79,7 +79,7 @@ def best_suggestions(word):
 
 
 word_list = [
-    "windows","linux","wsl"
+    "linux","container"
 ]
 
 # Set creation for eliminating duplicates and setting them to lower

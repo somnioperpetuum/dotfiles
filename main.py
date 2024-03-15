@@ -13,16 +13,17 @@ def main() -> None:
     print("Please if Win run as ADMIN")
     print("Be prepared to some pop up windows")
     print("\nThis script needs python and pip3 tools to run properly\n")
+    print("\nThis script will require a reboot\n")
 
 
 
     # Selecting the platform
 
-    platform: str = input("Which Platform are you using?(Default: Linux Desktop Environment)")
+    platform: str = input("Which Platform are you using?(Default: Linux Container Environment)")
 
     # Lobby
     if platform == "":
-        platform = "linux"
+        platform = "container"
 
     platform: str = platform.strip().lower()
     platform: list = suggestion.best_suggestions(platform)
@@ -30,13 +31,10 @@ def main() -> None:
     match platform[0]:
         case "linux":
             print("Linux Environment Setup")
-            install_script.linux_exec("linuxs")
-        case "windows":
-            print("Windows Environment Setup")
-            install_script.win_exec()
-        case "wsl":
-            print("WSL Environment Setup")
-            install_script.linux_exec("wsl")
+            install_script.linux_exec(platform[0])
+        case "container":
+            print("Container Environment Setup")
+            install_script.linux_exec(platform[0])
         case _:
             print("Not a valid input")
 
