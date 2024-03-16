@@ -38,10 +38,11 @@ def parse_and_run(file) -> None:
             command = line.split()
             list_of_commands.append(command)
     # Runs all commands in a batch order
-    len_of_list = len(list_of_commands)
+
 
     # Clean list
     list_of_commands = [item for item in list_of_commands if item != "" ]
+    len_of_list = len(list_of_commands)
 
     for index,item in enumerate(list_of_commands):
         result = subprocess.run(item,capture_output=True)
