@@ -43,9 +43,9 @@ def parse_and_run(file) -> None:
     # Clean list
     list_of_commands = [item for item in list_of_commands if item != "" ]
 
-    for item in list_of_commands:
+    for index,item in enumerate(list_of_commands):
         result = subprocess.run(item,capture_output=True)
-        print(f"\nStage done!\n Current Process -> {list_of_commands.index(item)} of {len_of_list}")
+        print(f"\nStage done!\n Current Process -> {index + 1} of {len_of_list}")
         # Log File Handling
         log_file.write("\n" + result.stdout.decode())
         log_file.write("\n" + result.stderr.decode())
