@@ -1,6 +1,8 @@
 sudo apt update 
 sudo apt upgrade -y
-sudo apt install nala tmux neofetch build-essential vim zsh curl flatpak -y
+sudo apt install nala tmux neofetch build-essential vim zsh curl ffmpeg flatpak -y
+sudo apt update
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virt-viewer dnsmasq vde2 openbsd-netcat ebtables iptables -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo snap refresh -y
 sudo snap install lxd -y
@@ -11,8 +13,3 @@ flatpak install flathub org.qbittorrent.qBittorrent
 flatpak install flathub net.ankiweb.Anki
 flatpak install flathub com.brave.Browser -y
 flatpak install flathub org.telegram.desktop
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
