@@ -20,15 +20,15 @@ def main() -> None:
 
     platform_input: str = input("Which Platform are you using?(Default: Linux Container Environment)")
 
-
-    # Lobby
     if platform_input == "":
-        platform_input = "container"
+        platform_input = "cont" #This code can be refactored 
+
 
     platform_input: str = platform_input.strip().lower()
     platform: list = suggestion.best_suggestions(platform_input)
 
-    print(platform[0])
+    # print(platform[0],platform) Debugging info
+
 
     match platform[0]:
         case "linux":
