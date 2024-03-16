@@ -91,4 +91,4 @@ for item in word_set:
     counter += 1 
 
 
-# print(best_suggestions("lin"))
+print(best_suggestions("cont"))

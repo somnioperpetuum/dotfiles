@@ -9,8 +9,7 @@ import somnio_config.scripts.utility.dynamic_recursive as suggestion
 
 def main() -> None:
     # Version
-    print("Installer Utility v0.3")
-    print("Please if Win run as ADMIN")
+    print("\nInstaller Utility v0.3")
     print("Be prepared to some pop up windows")
     print("\nThis script needs python and pip3 tools to run properly\n")
     print("\nThis script will require a reboot\n")
@@ -19,14 +18,17 @@ def main() -> None:
 
     # Selecting the platform
 
-    platform: str = input("Which Platform are you using?(Default: Linux Container Environment)")
+    platform_input: str = input("Which Platform are you using?(Default: Linux Container Environment)")
+
 
     # Lobby
-    if platform == "":
-        platform = "container"
+    if platform_input == "":
+        platform_input = "container"
 
-    platform: str = platform.strip().lower()
-    platform: list = suggestion.best_suggestions(platform)
+    platform_input: str = platform_input.strip().lower()
+    platform: list = suggestion.best_suggestions(platform_input)
+
+    print(platform[0])
 
     match platform[0]:
         case "linux":
