@@ -31,10 +31,10 @@ def main() -> None:
     match platform[0]:
         case "linux":
             print("Linux Environment Setup")
-            install_script.linux_exec(platform[0])
+            install_script.linux_exec("linux")
         case "container":
             print("Container Environment Setup")
-            install_script.linux_exec(platform[0])
+            install_script.linux_exec("cont")
         case _:
             print("Not a valid input")
 
