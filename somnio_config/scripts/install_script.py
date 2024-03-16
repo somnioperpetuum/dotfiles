@@ -19,10 +19,10 @@ def linux_exec(kind) -> None:
     """
     match kind:
         case "linux":
-            parse_and_run('/home/$USER/dotfiles/Linux_Sys_INFO.txt')
+            parse_and_run('Linux_Sys_INFO.txt')
             
         case "cont":
-            parse_and_run('/home/$USER/dotfiles/CONT_Sys_INFO.txt')
+            parse_and_run('CONT_Sys_INFO.txt')
         case _:
             pass
     print(f"Finished")
